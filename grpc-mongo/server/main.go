@@ -8,7 +8,7 @@ import (
 	"grpc-mongo/config"
 	"grpc-mongo/constants"
 	pro "grpc-mongo/grpc/profile" // Import the generated Go code
-	rpc "grpc-mongo/grpc/services"
+	rpc "grpc-mongo/controllers"
 	"grpc-mongo/services"
 
 	"go.mongodb.org/mongo-driver/mongo"

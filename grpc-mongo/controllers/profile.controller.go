@@ -1,4 +1,4 @@
-package rpcService
+package controllers
 
 import (
 	"context"
