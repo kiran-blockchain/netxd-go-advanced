@@ -6,7 +6,6 @@ import (
 	pro "grpc-mongo/grpc/profile"
 	"grpc-mongo/interfaces"
 	"grpc-mongo/models"
-	"go.mongodb.org/mongo-driver/mongo"
 )
 
 type RPCServer struct {
@@ -14,8 +13,7 @@ type RPCServer struct {
 }
 
 var (
-	ProfileCollection *mongo.Collection
-	ProfileService    interfaces.IProfile
+	ProfileService interfaces.IProfile
 )
 
 func (s *RPCServer) CreateProfile(ctx context.Context, req *pro.Profile) (*pro.ProfileResponse, error) {
