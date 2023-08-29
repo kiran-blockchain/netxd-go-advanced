@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option go_package ="github.com/kiran-blockchain/nextxd-go-advanced/grpc-mongo";
+
+package profile;
+
+service ProfileService {
+    rpc CreateProfile (Profile) returns (ProfileResponse);
+}
+
+message Profile {
+    string  Name =1;              
+	string Email= 2;            
+	string Password=3;         
+	string PasswordConfirm=4;
+	string Role=5;
+	string VerificationCode=6;
+	string ResetPasswordToken=7;
+	string ResetPasswordAt=8;
+	bool Verified = 9;
+	string CreatedAt=10;
+	string UpdatedAt=11;
+}
+
+message ProfileResponse {
+    string Name =1;              
+	string Email= 2;            
+	string Password=3;         
+	string PasswordConfirm=4;
+	string Role=5;
+	string VerificationCode=6;
+	string ResetPasswordToken=7;
+	string ResetPasswordAt=8;
+	bool Verified = 9;
+	string CreatedAt=10;
+	string UpdatedAt=11;
+}
